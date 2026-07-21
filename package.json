@@ -1,0 +1,7 @@
+{
+	"main": "nw_main.js",
+	"name": "console",
+	"version": "0.0.1",
+	"description": "console",
+	"author": "ace"
+}

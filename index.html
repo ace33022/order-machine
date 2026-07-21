@@ -1,0 +1,153 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+
+<!DOCTYPE html>
+
+<html lang="zh-Hant-TW">
+
+  <head>
+
+    <title>點餐系統</title>
+
+		<meta charset="utf-8">
+
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" /> -->
+
+    <meta name="theme-color" content="#FFFFFF" />
+
+		<meta name="robots" content="index,follow" />
+		
+    <meta name="keywords" content="font family" />
+    <meta name="description" content="font family" />
+
+    <meta name="author" content="ace33022" />
+		<meta name="ui-style" content="none" />
+		<!-- <meta name="ui-style" content="none" /> -->
+		<!-- <meta name="ui-style" content="bootstrap" /> -->
+		<meta name="force-login" content="N" />
+		<meta name="load-nw_inject_end" content="Y" />
+
+		<!-- <base href="." /> -->
+		<base href="/" />
+		
+		<!-- <script type="module"> -->
+		<script type="text/javascript">
+		
+			(function(root) {
+			
+				var base;
+				
+				/**
+				 *
+				 * @see {@link https://stackoverflow.com/questions/3494954/how-do-i-set-a-pages-base-href-in-javascript|How do I set a page's base href in Javascript? - Stack Overflow}
+				 *
+				 * @comment 2020/12/06 ace Firebox還未支援base標簽？
+				 * @comment 2020/12/06 ace Chrome設定base標籤後會重新載入script檔案！？藉由這個特性達到程式化載入指定檔案！！
+				 * @comment 2021/06/24 ace 重設base標籤，只會重新載入script檔案，但不會重新載入css檔案？！
+				 *
+				 */
+				if (document.getElementsByTagName('head')[0].getElementsByTagName('base').length == 0) {
+				
+					base = document.createElement('base');
+					
+					base.setAttribute('href', '/');
+					
+					document.head.appendChild(base);
+				}
+				else {
+
+					base = document.getElementsByTagName('head')[0].getElementsByTagName('base')[0];
+				}
+				
+				if (location.origin.startsWith('http')) {
+				
+					if ((location.origin.indexOf('127.0.0.1') == -1) && (location.origin.indexOf('localhost') == -1)) {
+				
+						base.setAttribute('href', 'https://ace33022.github.io/htdoc/');
+					}
+				}
+				else if (location.protocol == 'file:') {
+
+					base.setAttribute('href', 'L:/htdoc/');
+				}
+				else if (location.protocol == 'chrome-extension:') {
+
+					base.setAttribute('href', 'L:/htdoc/');
+					
+					if (typeof nw != 'undefined') {
+					
+						// 在nwJS環境下，可以將base的href屬性設定成chrome-extension:的執行環境路徑，取得工作目錄下的資料。
+						// 在開發過程時，可以將base的href屬性設定成共用的路徑；若要打包成獨立的執行檔時，需要將base的href屬性設定成chrome-extension:的執行環境路徑。
+						// base.setAttribute('href', location.origin + '/');
+					}
+				}
+			})(window);
+		</script>
+		
+		<!--
+		  --
+		  -- [HTML Favicon 圖示 | ShunNien's Blog](https://shunnien.github.io/2017/07/05/html-favicon-file-type/)
+			--
+		  -->
+		<!-- <link type="image/png" rel="icon" href="icon/favicon.ico" /> -->
+		<!-- <link type="image/png" rel="icon" href="icon/favicon.png" /> -->
+		<!-- <link type="image/svg+xml" rel="icon" href="icon/favicon.svg" sizes="any"> -->
+		<!-- <link type="image/vnd.microsoft.icon" rel="icon" href="icon/favicon.ico" sizes="32x32 48x48"> -->
+		<link type="image/png" rel="icon" href="icon/favicon.png" sizes="57x57">
+		
+		<!--
+			--
+			-- [Browse Fonts - Google Fonts](https://fonts.google.com/)
+			-- [Google Web Fonts 提供更多字型選擇 - Wibibi](https://www.wibibi.com/info.php?tid=213)
+			--
+			-->
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+		<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"> -->
+		
+		<!--
+			--
+			-- @see {@link https://meyerweb.com/eric/tools/css/reset/|CSS Tools: Reset CSS}
+			-- @see {@link https://meyerweb.com/eric/tools/css/reset/reset.css|https://meyerweb.com/eric/tools/css/reset/reset.css}
+			--
+			-- @memo 2025/12/30 ace W:/stylesheet/base.css、W:/stylesheet/ace-base.css是用MKLINK建立的檔案連結，無法被讀取。
+			-- @memo 2025/12/30 ace 可以讀取MKLINK建立目錄連結下的檔案。
+			--
+			-->
+		<link type="text/css" rel="stylesheet" href="stylesheet/reset.css" />
+		
+		<!-- <link type="text/css" rel="stylesheet" href="stylesheet/tablesort-reset.css" /> -->
+
+		<!-- <link type="text/css" rel="stylesheet" href="javascript/tablesort/tablesort.css" /> -->
+		<!-- <link type="text/css" rel="stylesheet" href="javascript/bootstrap/BootSideMenu-1.0.0/css/BootSideMenu.css" /> -->
+		
+		<link type="text/css" rel="stylesheet" href="stylesheet/base.css">
+		<!-- <link type="text/css" rel="stylesheet" href="stylesheet/ace-base.css"> -->
+		
+		<!--
+			--
+			-- @memo 2025/01/04 ace 由於Tomcat設計架構採用template統一載入nw_inject_end.js檔案，CSS語法放在index.html會造成無法載入的架構。
+			--
+			-->
+    <!-- <style type="text/css"></style> -->
+		
+		<!-- <script type="text/javascript" src="javascript/tw/ace33022/NameSpace.js"></script> -->
+		<script type="text/javascript" src="javascript/tw/ace33022/DefaultConfiguration.js"></script>
+		<script type="text/javascript" src="javascript/tw/ace33022/Configuration.js"></script>
+		
+		<!--
+		<script type="text/javascript" src="javascript/tw/ace33022/browser/ui/component/test-component-004.js"></script>
+		<script type="text/javascript" src="javascript/tw/ace33022/browser/ui/component/list-product-000.js"></script>
+		-->
+  </head>
+
+	<!-- <body class="container" style=""></body> -->
+	<!-- <body class="container-fluid" style=""></body> -->
+	<!-- <body class="container-fluid" style="overflow-y: hidden;"></body> -->
+	<!-- <body class="container-fluid" style="padding-left: 0px; padding-right: 0px;"></body> -->
+	<body></body>
+</html>

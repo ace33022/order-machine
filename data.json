@@ -1,0 +1,88 @@
+{
+
+	"code": 0,
+	"message": "",
+	"data": [
+	
+		{
+			"pNoS": "030101",
+			"productName": "炒麵麵包",
+			"pathImage": "image/subdep/030101.JPG"
+		},
+		{
+			"pNoS": "030102",
+			"productName": "炒麵麵包",
+			"pathImage": "image/subdep/030102.JPG"
+		},
+		{
+			"pNoS": "030103",
+			"productName": "炒麵麵包",
+			"pathImage": "image/subdep/030103.JPG"
+		},
+		{
+			"pNoS": "030104",
+			"productName": "炒麵麵包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030105",
+			"productName": "炒麵麵包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030106",
+			"productName": "炒麵麵包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030107",
+			"productName": "炒麵麵包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030108",
+			"productName": "炒麵麵包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030109",
+			"productName": "炒麵麵包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030110",
+			"productName": "炒麵麵包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030110",
+			"productName": "漢堡包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030111",
+			"productName": "漢堡包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030112",
+			"productName": "漢堡包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030113",
+			"productName": "漢堡包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030114",
+			"productName": "漢堡包",
+			"pathImage": "icon/DEFAULT.PNG"
+		},
+		{
+			"pNoS": "030115",
+			"productName": "漢堡包",
+			"pathImage": "icon/DEFAULT.PNG"
+		}
+	]
+}
