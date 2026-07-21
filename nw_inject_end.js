@@ -182,7 +182,7 @@ function main() {
 		
 				console.log(that["data"]);
 			
-				fetch('./data.json')
+				fetch(location + 'data.json')
 				.then(response => {
 				
 					if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
