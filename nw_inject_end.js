@@ -180,6 +180,30 @@ function main() {
 		
 			if ((location.origin.indexOf('127.0.0.1') == -1) && (location.origin.indexOf('localhost') == -1)) {
 		
+				console.log(that["data"]);
+			
+				fetch('./data.json')
+				.then(response => {
+				
+					if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+					
+					return response.json(); // Parses JSON data into a JavaScript object
+				})
+				.then(data => {
+				
+					// console.log(data); // Work with your JSON data here
+					
+					that["data"]["subdep"] = data["data"];
+					
+					// listProduct.setAttribute('subdep', JSON.stringify(data["data"]));
+					listProduct.setAttribute('subdep', JSON.stringify(that["data"]["subdep"]));
+					
+					document.body.appendChild(listProduct);
+				})
+				.catch(error => {
+				
+					console.error('Error fetching JSON:', error);
+				});
 			}
 			else {
 			
